@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon src/index.ts",
     "dev": "nodemon --exec ts-node src/index.ts",
-    "test": "vitest",
+    "test": "vitest run --coverage",
     "migrate": "ts-node src/migrations/runMigration.ts migrate",
     "run-seeder-up": "ts-node src/seeders/runSeeder.ts up",
     "run-seeder-down": "ts-node src/seeders/runSeeder.ts down"

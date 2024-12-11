@@ -1,12 +1,15 @@
 import { login, register } from '../../controllers/AuthController'; // Asegúrate de que la ruta sea correcta
 import  AuthService  from '../../services/AuthService'; // Asegúrate de que la ruta sea correcta
-import  { validateRequiredFields, validatePassword }  from '../../utils/validationsUtils';
+import  { validateRequiredFields, validatePassword }  from '../../utils/validationUtil';
 import { Request, Response } from 'express';
 import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
 
 // Mocking de las dependencias
 vi.mock('../../services/AuthService');
-vi.mock('../../utils/validationsUtils');
+vi.mock('path/to/validationsUtils', () => ({
+    validateRequiredFields: vi.fn(),
+    validatePassword: vi.fn(),
+  }));
 
 describe('Auth Controller', () => {
   let req: Partial<Request>;
