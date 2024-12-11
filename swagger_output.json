@@ -1,0 +1,278 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "WIIGILABS API",
+    "description": "Documentación de la API de ejemplo",
+    "version": "1.0.0"
+  },
+  "host": "localhost:5000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/login": {
+      "post": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/register": {
+      "post": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "User": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "example": "object"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "ID del usuario"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "c9b1c4d2-e658-4ef4-9c72-d5a52bff1b9b"
+                }
+              }
+            },
+            "name": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Nombre del usuario"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "Juan Pérez"
+                }
+              }
+            },
+            "email": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Correo electrónico del usuario"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "juan.perez@example.com"
+                }
+              }
+            },
+            "password": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Contraseña del usuario"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "Contraseña123!"
+                }
+              }
+            },
+            "createdAt": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "format": {
+                  "type": "string",
+                  "example": "date-time"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Fecha de creación"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "2024-12-11T10:00:00Z"
+                }
+              }
+            },
+            "updatedAt": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "format": {
+                  "type": "string",
+                  "example": "date-time"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Fecha de la última actualización"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "2024-12-11T10:00:00Z"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "Log": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "example": "object"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "ID del log"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "4b35d4a9-9379-4ef8-bdef-e89901fa215d"
+                }
+              }
+            },
+            "userId": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "ID del usuario que realizó la acción"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "c9b1c4d2-e658-4ef4-9c72-d5a52bff1b9b"
+                }
+              }
+            },
+            "action": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Acción realizada por el usuario"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "LOGIN"
+                }
+              }
+            },
+            "createdAt": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "format": {
+                  "type": "string",
+                  "example": "date-time"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Fecha en que se registró el log"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "2024-12-11T10:00:00Z"
+                }
+              }
+            },
+            "updatedAt": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "format": {
+                  "type": "string",
+                  "example": "date-time"
+                },
+                "description": {
+                  "type": "string",
+                  "example": "Fecha de la última actualización del log"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "2024-12-11T10:00:00Z"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

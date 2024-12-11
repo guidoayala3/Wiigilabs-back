@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types", "./src/utils"],
+    "baseUrl": "./",
+    "paths": {
+      "@utils/*": ["src/utils/*"]
+    },
+    "types": ["vitest/globals"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/utils/**/*.d.ts",
+    "migrations/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
